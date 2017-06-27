@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|VT323|Oswald');
+@import url(https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300);
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+body, h1, h2,h3, span, div {
+  outline: none !important;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+h5{
+  font-family: 'Pacifico';
+  text-align: center;
+  font-size: 1.25rem;
+  margin-top: 70px;
+}
+h5>a{
+  cursor: pointer;
+}
+.container{
+  width: 100%;
+  /*height: 900px;*/
+  background:white;
+}
+.wrapper{
+  width: 450px;
+  height: 450px;
+  position: relative;
+  margin: 0px auto;
+  top: 50px;
+  background: #333333;
+  border-radius: 50%;
+  padding: 25px;
+}
+.inner-wrap {
+  position: relative;
+  top: 2px;
+  left: 3px;
+}
+.top, .bottom {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  clear: both;
+  cursor: pointer;
+  border: 10px solid #333;
+}
+.green {
+  background: #00A74A;
+  border-top-left-radius: 100%;
+}
+.red {
+  background: #9F0F17;
+  border-top-right-radius: 100%;
+}
+.yellow{
+  background: #CCA707;
+  border-bottom-left-radius: 100%;
+}
+.blue {
+  background: #094A8F;
+  border-bottom-right-radius: 100%;
+}
+.center {
+    margin: 0px auto 0;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: white;
+    left: 0px;
+    position: relative;
+    top: -360px;
+    border: 20px solid #333;
+}
+.center > h1{
+    font-family: 'Alfa Slab One', cursive;
+    color: #222;
+    font-size: 2.7em;
+    margin-top: 35px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+.status{
+  margin-left: 20px;
+}
+.row {
+  width: 60px;
+  display: inline-block;
+}
+.count {
+  width: 50px;
+  font-size: 1.4rem;
+  font-weight: 100;
+  margin: auto;
+  padding-top: 5px;
+  border-radius: 10px;
+  background: #32050C;
+  border: 4px solid #222;
+}
+.label {
+  margin: 5px auto 0;
+  font-size: 12px;
+  font-weight: normal;
+  text-align: center;
+}
+.start, .strict {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: auto;
+  border: 4px solid #222;
+  cursor: pointer;
+}
+.start:active, .strict:active {
+  /*background-color: #3e8e41;*/
+  box-shadow: 0 2px #666;
+  transform: translateY(2px);
+}
+.start {
+  background: red;
+}
+.strict {
+  background: yellow;
+}
+.strict-on {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: black;
+  margin: auto;
+  border: 2px solid black;
+  position: relative;
+  top: -65px;
+}
+.strict-on-off{
+  background: red;
+}
+.on-off{
+  margin-left: 55px;
+}
+.on-off .label , .on-off .switch{
+  display: inline-block;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 16px;
+  top: 4px;
+  margin-left: 10px; 
+  margin-right: 10px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #222;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 18px;
+  left: 4px;
+  bottom: 2px;
+  background-color: #2196F3;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+input:checked + .slider:after {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 18px;
+    right: 4px;
+    bottom: 2px;
+    background-color: #2196F3;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+input:checked + .slider:before {
+  opacity: 0;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.on-off-switch {
+  color: red;
+  text-align: center;
+}
+
+.not-allow-click{
+  pointer-events: none;
+}
+
+/*flashing text*/
+.blink-me {
+    font-weight: bold;
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 3;
+    
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 0.3s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: 3;
+    
+    animation-name: blinker;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 3; 
+}
+
+@-moz-keyframes blinker {  
+    from {color: red;}
+    to {color: black;}
+}
+
+@-webkit-keyframes blinker {  
+    from {color: red;}
+    to {color: black;}
+}
+
+@keyframes blinker {  
+    from {color: red;}
+    to {color: black;}
+}

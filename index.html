@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simon</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-app='Simon' ng-controller="SimonController as vm" ng-cloak>
+  <div class="container">
+    <div class="wrapper">
+      <div class="inner-wrap">
+        <div class="top-row">
+          <div class="top green color" id='0' ng-click="vm.turnHuman(0)"></div>
+          <div class="top red color" id='1' ng-click="vm.turnHuman(1)"></div>
+        </div>
+        <div class="bottom-row">
+          <div class="bottom yellow color" id='2' ng-click="vm.turnHuman(2)"></div>
+          <div class="bottom blue color" id='3' ng-click="vm.turnHuman(3)"></div>
+        </div>
+        <div class="center">
+          <h1>Simon <small>&reg;</small></h1>
+          <div class="status">
+            <div class="st-box row">
+              <h1 class="count" ng-class="{'on-off-switch':vm.checked, 'blink-me': vm.blinkMe}"><span ng-class="{'blink-me': vm.blinkMe}">{{vm.showState}}<span></h1>
+              <h3 class="label">COUNT</h3>
+            </div>
+            <div class="dispaly-inline row">
+              <div class="start" ng-click="vm.startFn()"></div>
+              <h3 class="label">START</h3>
+            </div>
+            <div class="dispaly-inline row">
+              <div class="strict" ng-click="vm.strictOnOff()"></div>
+              <h3 class="label">STRICT</h3>
+              <div class="strict-on" ng-class="{'strict-on-off': vm.strict}"></div>
+            </div>
+          </div>
+          <div class="on-off">
+            <div class="label">OFF</div>
+            <label class="switch">
+              <input type="checkbox" ng-model="vm.checked" ng-change="vm.onOff(vm.checked)">
+              <div class="slider"></div>
+            </label>
+            <div class="label">ON</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h5 class="credit text-center">Designed & Coded by <a href="https://www.linkedin.com/in/kyawzintun/" target="_blank">KZT</a></h5>
+</body>
+</html>
