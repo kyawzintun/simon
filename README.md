@@ -1,3 +1,3 @@
 # simon
 
-*[Demo](https://kyawzintun.github.io/portfolio/)*
+*[Demo](https://kyawzintun.github.io/simon/)*
